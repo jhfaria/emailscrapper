@@ -26,7 +26,7 @@
 
 \n								/* exceptions */
 
-[ \t]+							/* exceptions */
+[ \t]							/* exceptions */
 %%
 
 int main() 

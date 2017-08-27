@@ -370,11 +370,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[24] =
+static yyconst flex_int16_t yy_accept[23] =
     {   0,
-        0,    0,    8,    7,    6,    5,    4,    3,    3,    6,
-        0,    3,    0,    0,    0,    0,    0,    1,    2,    1,
-        0,    1,    0
+        0,    0,    8,    7,    6,    5,    4,    3,    3,    0,
+        3,    0,    0,    0,    0,    0,    1,    2,    1,    0,
+        1,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -414,36 +414,36 @@ static yyconst YY_CHAR yy_meta[11] =
         1,    1,    1,    1,    2,    2,    3,    1,    2,    3
     } ;
 
-static yyconst flex_uint16_t yy_base[29] =
+static yyconst flex_uint16_t yy_base[28] =
     {   0,
-        0,    0,   37,   38,   34,   38,   38,    6,    0,   33,
-       10,   26,    0,   14,    0,   28,    0,   20,   27,   25,
-        0,   24,   38,   25,   26,   20,   16,   15
+        0,    0,   35,   36,   36,   36,   36,    6,    0,   10,
+       26,    0,   14,    0,   28,    0,   20,   27,   25,    0,
+       24,   36,   25,   26,   20,   16,   15
     } ;
 
-static yyconst flex_int16_t yy_def[29] =
+static yyconst flex_int16_t yy_def[28] =
     {   0,
-       23,    1,   23,   23,   23,   23,   23,   23,    8,   23,
-       24,    8,   25,    8,   26,   25,   27,   26,   23,   27,
-       28,   28,    0,   23,   23,   23,   23,   23
+       22,    1,   22,   22,   22,   22,   22,   22,    8,   23,
+        8,   24,    8,   25,   24,   26,   25,   22,   26,   27,
+       27,    0,   22,   22,   22,   22,   22
     } ;
 
-static yyconst flex_uint16_t yy_nxt[49] =
+static yyconst flex_uint16_t yy_nxt[47] =
     {   0,
         4,    5,    6,    7,    7,    7,    8,    7,    7,    9,
-       11,   11,   12,   13,   11,   12,   14,   22,   20,   14,
-       14,   17,   18,   14,   19,   21,   11,   11,   16,   21,
-       21,   19,   19,   15,   10,   10,   23,    3,   23,   23,
-       23,   23,   23,   23,   23,   23,   23,   23
+       10,   10,   11,   12,   10,   11,   13,   21,   19,   13,
+       13,   16,   17,   13,   18,   20,   10,   10,   15,   20,
+       20,   18,   18,   14,   22,    3,   22,   22,   22,   22,
+       22,   22,   22,   22,   22,   22
     } ;
 
-static yyconst flex_int16_t yy_chk[49] =
+static yyconst flex_int16_t yy_chk[47] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        8,    8,    8,    8,    8,    8,   11,   28,   27,   11,
-       14,   14,   26,   14,   18,   18,   24,   24,   25,   22,
-       20,   19,   16,   12,   10,    5,    3,   23,   23,   23,
-       23,   23,   23,   23,   23,   23,   23,   23
+        8,    8,    8,    8,    8,    8,   10,   27,   26,   10,
+       13,   13,   25,   13,   17,   17,   23,   23,   24,   21,
+       19,   18,   15,   11,    3,   22,   22,   22,   22,   22,
+       22,   22,   22,   22,   22,   22
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -464,21 +464,19 @@ char *yytext;
 #line 2 "src/main.l"
  /*********************************************************************************************************************************\
 |																																	|
-|	João Henrique Faria		RA170501	03/08/2017 																					|
+|	João Henrique Faria		RA170501	26/08/2017 																					|
 |																																	|
-|	** Word counter ** 																												|
-|																																	|
-|		This script receives several characters in its input, represeting words. The script reads every character until reaching	|
-|	a line feed character (\n). Then, the script prints the number of words of the input file, and finishes. 						|
+|	** Email scrapper ** 																											|
 |																																	|
 |	* Tests *																														|
 |																																	|
-|		12/12 (100%)																												|
+|		09/09 (100%)																												|
 |																																	|
  \*********************************************************************************************************************************/
-	
+
+/* library inclusion */
 #include <stdio.h>
-#line 482 "src/main.c"
+#line 480 "src/main.c"
 
 #define INITIAL 0
 
@@ -696,10 +694,9 @@ YY_DECL
 		}
 
 	{
-#line 21 "src/main.l"
+#line 18 "src/main.l"
 
-
-#line 703 "src/main.c"
+#line 700 "src/main.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -726,13 +723,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 24 )
+				if ( yy_current_state >= 23 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (flex_int16_t) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 38 );
+		while ( yy_base[yy_current_state] != 36 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -758,41 +755,41 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 23 "src/main.l"
+#line 19 "src/main.l"
 {printf("%s\n", yytext);} /* valid e-mail */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 25 "src/main.l"
+#line 21 "src/main.l"
 /* exceptions */
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 27 "src/main.l"
+#line 23 "src/main.l"
 /* exceptions */
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 29 "src/main.l"
+#line 25 "src/main.l"
 /* exceptions */
 	YY_BREAK
 case 5:
 /* rule 5 can match eol */
 YY_RULE_SETUP
-#line 31 "src/main.l"
+#line 27 "src/main.l"
 /* exceptions */
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 33 "src/main.l"
+#line 29 "src/main.l"
 /* exceptions */
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 35 "src/main.l"
+#line 30 "src/main.l"
 ECHO;
 	YY_BREAK
-#line 796 "src/main.c"
+#line 793 "src/main.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1085,7 +1082,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 24 )
+			if ( yy_current_state >= 23 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (flex_int16_t) yy_c];
@@ -1113,11 +1110,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 24 )
+		if ( yy_current_state >= 23 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (flex_int16_t) yy_c];
-	yy_is_jam = (yy_current_state == 23);
+	yy_is_jam = (yy_current_state == 22);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1793,8 +1790,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 35 "src/main.l"
-
+#line 30 "src/main.l"
 
 
 
